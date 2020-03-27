@@ -19,7 +19,9 @@ function App() {
           <li><code>componentDidMount()&#123;...&#125;</code></li>
       </ol>
       </header>
-      <Timer />
+      <div className="App-body">
+        <Timer />
+      </div>
     </div>
   );
 }

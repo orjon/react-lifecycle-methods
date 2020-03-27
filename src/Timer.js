@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 class Timer extends Component {
   constructor(props){
     super(props);
+    this.state = {
+      time: new Date()
+    }
     console.log('In Constructor')
   }
   componentDidMount(){
@@ -11,7 +14,9 @@ class Timer extends Component {
   render(){
     console.log('In Render')
     return(
-      <div></div>
+      <div>
+        <h1>{this.state.time.getHours()}:{this.state.time.getMinutes()}:{this.state.time.getSeconds()}</h1>
+      </div>
     )
   }
 }
