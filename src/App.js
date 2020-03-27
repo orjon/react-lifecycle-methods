@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Timer from './Timer';
 import ZenQuote from './ZenQuote';
+import GithubUserInfo from './GithubUserInfo';
 
 
 function App() {
@@ -24,6 +25,10 @@ function App() {
         <Timer />
         <br></br>
         <ZenQuote />
+        <br></br>
+        <GithubUserInfo username='facebook'/>
+        <GithubUserInfo username='orjon'/>
+        <GithubUserInfo username='colt'/>
       </div>
     </div>
   );
