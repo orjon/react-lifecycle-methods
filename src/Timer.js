@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
+import './Timer.css';
 
 class Timer extends Component {
   constructor(props){
     super(props);
     this.state = {
-      time: new Date()
+      loadTime: new Date(),
+      currentTime: new Date()
     }
-    console.log('In Constructor')
+    console.log('In <Timer /> constructor')
   }
   componentDidMount(){
-    console.log('In componentDidMount')
+    console.log('In <Timer /> componentDidMount')
+    this.timerID = setInterval( () => {
+      this.setState({ currentTime: new Date() })
+    },1000);
   }
+
+
   render(){
-    console.log('In Render')
+    console.log('In <Timer /> render')
     return(
       <div>
-        <h1>{this.state.time.getHours()}:{this.state.time.getMinutes()}:{this.state.time.getSeconds()}</h1>
+        <h4>Component on page since:</h4>
+        <h4>{this.state.loadTime.getHours()}:{this.state.loadTime.getMinutes()}:{this.state.loadTime.getSeconds()}</h4>
+        <h4>Current Time:</h4>
+        <h4>{this.state.currentTime.getHours()}:{this.state.currentTime.getMinutes()}:{this.state.currentTime.getSeconds()}</h4>
       </div>
     )
   }

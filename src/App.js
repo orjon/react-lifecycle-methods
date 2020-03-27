@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Timer from './Timer';
+import ZenQuote from './ZenQuote';
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
       </header>
       <div className="App-body">
         <Timer />
+        <br></br>
+        <ZenQuote />
       </div>
     </div>
   );
