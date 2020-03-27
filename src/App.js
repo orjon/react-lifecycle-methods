@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Timer from './Timer';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h2>
+          Lifecycle Methods
+        </h2>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          [open console: Cmd+Option+J]
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ol>
+          <li><code>constructor(props)&#123;...&#125;</code></li>
+          <li><code>render()&#123;...&#125;</code></li>
+          <li><code>componentDidMount()&#123;...&#125;</code></li>
+      </ol>
       </header>
+      <Timer />
     </div>
   );
 }
