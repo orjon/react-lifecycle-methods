@@ -24,7 +24,6 @@ class ZenQuote extends Component {
       <div>
         Remember: {this.state.quote}
         <br></br>
-        <br></br>
         ...and don't get data or setState in the constructor
       </div>
     )

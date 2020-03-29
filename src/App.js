@@ -26,6 +26,7 @@ function App() {
         <br></br>
         <ZenQuote />
         <br></br>
+        Facebook API async requests:
         <GithubUserInfo username='facebook'/>
         <GithubUserInfo username='orjon'/>
         <GithubUserInfo username='colt'/>

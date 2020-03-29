@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './GithubUserInfo.css'
 
 class GithubUserInfo extends Component {
   constructor(props){
     super(props);
     this.state ={
+      url: '',
       image_url:'',
       name: ''
     }
@@ -15,13 +17,17 @@ class GithubUserInfo extends Component {
     let response = await axios.get(url)
     console.log(response.data);
     let data= response.data;
-    this.setState({ image_url: data.avatar_url, name: data.name})
+    this.setState({ image_url: data.avatar_url, name: data.name, url: data.html_url})
   } 
 
   render() {
     return(
-      <div>
-        <img src={this.state.image_url} />
+      <div className='facebookInfo'>
+        <img src={this.state.image_url} alt=''/>
+        <div className='details'>
+          <p>{this.state.name}</p>
+          <p><a href={this.state.url}>{this.state.url}</a></p>
+        </div>
       </div>
     )
   }
