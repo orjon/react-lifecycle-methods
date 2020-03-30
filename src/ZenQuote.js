@@ -18,6 +18,10 @@ class ZenQuote extends Component {
       );
     })
   }
+
+  componentDidUpdate(prevProps, prevState){
+    console.log('In <ZenQuote /> componentDidUpdate')
+  }
   render() {
     console.log('In <ZenQuote /> render')
     return (
